@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import ru.velialcult.library.core.VersionAdapter;
+import ru.velialcult.library.update.UpdateChecker;
 import ru.velialcult.pursuitresources.command.CultPursuitResourcesCommand;
 import ru.velialcult.pursuitresources.file.EventConfig;
 import ru.velialcult.pursuitresources.providers.ProvidersManager;
@@ -51,6 +52,9 @@ public class CultPursuitResources extends JavaPlugin {
                 getLogger().info(VersionAdapter.TextUtil().colorize("  &#00FF7F&lУспешно! &fПлагин &#32CD32CultSeller &fнайден, продолжаю загрузку!"));
                 getLogger().info(" ");
             }
+
+            UpdateChecker updateChecker = new UpdateChecker(this, "CultPursuitResources");
+            updateChecker.check();
 
             EventConfig eventConfig = new EventConfig(this);
 
