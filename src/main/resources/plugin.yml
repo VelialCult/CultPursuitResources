@@ -1,0 +1,10 @@
+name: CultPursuitResource
+version: "${project.version}"
+api-version: 1.16
+main: ru.velialcult.pursuitresources.CultPursuitResources
+authors:
+  - VelialCult
+softdepend:
+  - CultSeller
+commands:
+  cultpursuitresources:
